@@ -27,6 +27,6 @@ OSRS Market Tracker aims to provide one place to:
 
 ## Tech Stack
 
-- **Backend:** Kotlin, Spring Boot, PostgreSQL, Docker
+- **Backend:** Java, Spring Boot, PostgreSQL, Docker
 - **Frontend:** React, TypeScript 
 - **AI:** Python, FastAPI, LLM-powered market insights *(planned)*
