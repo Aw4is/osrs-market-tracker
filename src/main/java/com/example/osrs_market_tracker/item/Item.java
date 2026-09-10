@@ -20,30 +20,44 @@ public class Item {
     @Column(nullable = false)
     private Boolean members;
 
-    @Column(nullable = false)
+    @Column
     private Integer highAlch;
 
-    @Column(nullable = false)
+    @Column
     private Integer lowAlch;
 
-    @Column(nullable = false)
+    @Column
     private Integer buyLimit;
+
+    @Column(nullable = false, unique = true)
+    private Long externalId;
+
 
     public Item() {
     }
 
     public Item(
+            Long externalId,
             String name,
             Boolean members,
             Integer highAlch,
             Integer lowAlch,
             Integer buyLimit
     ) {
+        this.externalId = externalId;
         this.name = name;
         this.members = members;
         this.highAlch = highAlch;
         this.lowAlch = lowAlch;
         this.buyLimit = buyLimit;
+    }
+
+    public void setExternalId(Long externalId) {
+        this.externalId = externalId;
+    }
+
+    public Long getExternalId() {
+        return externalId;
     }
 
     public Long getId() {
